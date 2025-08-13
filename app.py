@@ -43,6 +43,8 @@ def list_users():
             )
 
         total = query.count()
+   
+        app.logger.info("SEARCH q=%r total=%s page=%s", q, total, page)
 
         # Arama yapıldıysa ve hiç sonuç yoksa uyarı ver
         if q and total == 0:
